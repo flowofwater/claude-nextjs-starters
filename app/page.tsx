@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { siteConfig } from "@/lib/constants"
 import type { Feature } from "@/types"
 
 /**
@@ -74,7 +75,7 @@ export default function HomePage() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link
-                href="https://github.com"
+                href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >

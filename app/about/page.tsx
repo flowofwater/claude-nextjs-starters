@@ -121,7 +121,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 flex gap-4">
               <Button size="lg" asChild>
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Link href={siteConfig.links.github} target="_blank" rel="noopener noreferrer">
                   GitHub에서 시작하기
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

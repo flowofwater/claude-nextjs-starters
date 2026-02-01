@@ -4,11 +4,11 @@
 export const siteConfig = {
   name: "스타터킷",
   description: "Next.js + shadcn/ui + Tailwind CSS로 구축된 모던 웹 스타터킷",
-  url: "https://example.com",
-  ogImage: "https://example.com/og.jpg",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"}/og.jpg`,
   links: {
-    github: "https://github.com",
-    twitter: "https://twitter.com",
+    github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com",
+    twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://twitter.com",
   },
 } as const
 

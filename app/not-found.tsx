@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { ArrowLeft, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -8,6 +9,8 @@ import { Button } from "@/components/ui/button"
  * 404 Not Found 페이지
  */
 export default function NotFound() {
+  const router = useRouter()
+
   return (
     <div className="container flex min-h-[calc(100vh-16rem)] flex-col items-center justify-center py-16">
       <div className="text-center">
@@ -31,7 +34,7 @@ export default function NotFound() {
               홈으로 이동
             </Link>
           </Button>
-          <Button variant="outline" onClick={() => window.history.back()}>
+          <Button variant="outline" onClick={() => router.back()}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             이전 페이지로
           </Button>
