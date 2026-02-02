@@ -14,7 +14,7 @@ export const metadata: Metadata = {
  * 포함된 기술 스택
  */
 const techStack = [
-  "Next.js 15 App Router",
+  "Next.js 16 App Router",
   "React 19",
   "TypeScript 5",
   "Tailwind CSS v4",

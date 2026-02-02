@@ -18,7 +18,7 @@ import type { Feature } from "@/types"
 const features: Feature[] = [
   {
     icon: Code2,
-    title: "Next.js 15 App Router",
+    title: "Next.js 16 App Router",
     description: "최신 Next.js의 App Router를 활용한 서버 컴포넌트와 스트리밍 지원",
   },
   {
