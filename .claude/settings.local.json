@@ -12,6 +12,30 @@
     "playwright"
   ],
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/pre-write-quality-check.sh",
+            "statusMessage": "코드 품질 검증 중..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-write-e2e-test.sh",
+            "statusMessage": "E2E 테스트 실행 중..."
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "permission_prompt",
@@ -19,7 +43,6 @@
           {
             "type": "command",
             "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/slack-permission-notify.sh",
-            "async": true,
             "statusMessage": "Slack 알림 전송 중..."
           }
         ]
@@ -31,7 +54,6 @@
           {
             "type": "command",
             "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/slack-completion-notify.sh",
-            "async": true,
             "statusMessage": "작업 완료 알림 전송 중..."
           }
         ]
